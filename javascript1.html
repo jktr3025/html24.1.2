@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="java">
+        var today = new Date();
+        console.log("today:",today)
+        document.write(today + "<br>")
+       var year = today.getFullYear()
+        document.write(year + "년" + "<br>")
+        var mon = today.getMonth()+1;
+        document.write(mon + "월" + "<br>")
+        //무조건 인덱스 번호로 세서 실제 월보다 1개월 적게 출력되므로 +1해줘야함
+        var day = today.getDay();
+        // document.write(day + "요일" + "<br>")
+        //요일을 0~6(일~토) 숫자로 나타내는 명령어 (엑셀 choose함수)
+
+        switch(day){
+            case 0:
+            d_day = "일요일"; break;
+            case 1:
+            d_day = "월요일"; break;
+            case 2:
+            d_day = "화요일";
+            // document.bgColor="yellow";
+            break;
+            case 3:
+            d_day = "수요일"; break;
+            case 4:
+            d_day = "목요일"; break;
+            case 5:
+            d_day = "금요일"; break;
+            case 6:
+            d_day = "토요일"; break;
+        }
+        document.write(d_day + "<br>")
+        var date = today.getDate();
+        document.write(date + "일" + "<br>")
+        //일자 구하는 명령어
+
+        var hour = today.getHours();
+        var minutes = today.getMinutes();
+        var seconds = today.getSeconds();
+        document.write("<h2>오늘의시간</h2>")
+        document.write(hour + "시" + minutes + "분" + seconds + "초")
+
+        if((seconds % 2) == 0){
+            document.bgColor="pink"
+        }else{
+            document.bgColor="orange"
+
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
